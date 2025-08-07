@@ -1,0 +1,71 @@
+{
+    "BD2启动": {
+        "action": "StartApp",
+        "package": "com.neowizgames.game.browndust2",
+        //30秒后执行"检查启动页面"
+        "post_delay": 30000,
+        "next": [
+            "检查启动页面"
+        ]
+    },
+    "检查启动页面": {
+        "recognition": "TemplateMatch",
+        "template": "进入游戏.png",
+        "target": true,
+        "action": "Click",
+        //5秒后执行"回到主菜单"
+        "post_delay": 5000,
+        "next": [
+            "支付失败",
+            "确认收菜",
+            "检查启动页面"
+        ]
+    },
+    "支付失败": {
+        "recognition": "OCR",
+        "expected": "支付失败",
+        "target": true,
+        "action": "Click",
+        "next": [
+            "检查启动页面"
+        ]
+    },
+    "回到主菜单": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "roi": [
+            87,
+            154,
+            64,
+            56
+        ],
+        "template": "副本.png",
+        "target": [
+            1182,
+            47,
+            1,
+            1
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 5000
+    },
+    "确认收菜": {
+        "timeout": 5000,
+        "recognition": "TemplateMatch",
+        "template": "每日感叹号.png",
+        "green_mask": true,
+        "roi": [
+            826,
+            516,
+            105,
+            100
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "回到主菜单"
+        ]
+    }
+}

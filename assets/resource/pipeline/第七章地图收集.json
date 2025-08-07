@@ -1,0 +1,262 @@
+{
+    "第七章进入卡带": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            814,
+            621,
+            44,
+            67
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            1111,
+            631,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "next": [
+            "划动主线"
+        ]
+    },
+    "划动主线": {
+        "recognition": "OCR",
+        "expected": "游戏卡珍藏集",
+        "roi": [
+            184,
+            18,
+            154,
+            38
+        ],
+        "action": "Swipe",
+        "begin": [
+            350,
+            212,
+            1,
+            1
+        ],
+        "end": [
+            801,
+            212,
+            1,
+            1
+        ],
+        "post_delay": 5000,
+        "next": [
+            "选中第七章"
+        ]
+    },
+    "选中第七章": {
+        "recognition": "TemplateMatch",
+        "template": "第七章2.png",
+        "target": true,
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 3500,
+        "next": [
+            "点击传送按钮1"
+        ]
+    },
+    "点击传送按钮1": {
+        "recognition": "TemplateMatch",
+        "template": "传送按钮.png",
+        "green_mask": true,
+        "action": "Click",
+        "timeout": 800,
+        "post_delay": 2000,
+        "next": [
+            "点击切换地图1"
+        ]
+    },
+    "点击切换地图1": {
+        "timeout": 3500,
+        "recognition": "OCR",
+        "expected": [
+            "战斗",
+            "拉勒凯旅馆",
+            "罗戴夫旅馆",
+            "华特波尔旅馆"
+        ],
+        "roi": [
+            532,
+            617,
+            223,
+            47
+        ],
+        "action": "Click",
+        "pre_delay": 1000,
+        "target": [
+            303,
+            342,
+            1,
+            1
+        ],
+        "next": [
+            "点击切换地图1"
+        ],
+        "on_error": [
+            "点击传送"
+        ]
+    },
+    "点击传送": {
+        "recognition": "TemplateMatch",
+        "template": "传送点1.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 3500,
+        "next": [
+            "执行探查"
+        ]
+    },
+    "执行探查": {
+        "recognition": "TemplateMatch",
+        "template": "主菜单.png",
+        "pre_delay": 3500,
+        "action": "Click",
+        "target": [
+            1008,
+            649,
+            6,
+            7
+        ],
+        "next": [
+            "执行吸收"
+        ]
+    },
+    "执行吸收": {
+        "recognition": "TemplateMatch",
+        "template": "吸收.png",
+        "roi": [
+            939,
+            528,
+            72,
+            72
+        ],
+        "action": "Click",
+        "post_delay": 3500,
+        "next": [
+            "执行吸收2"
+        ]
+    },
+    "执行吸收2": {
+        "recognition": "OCR",
+        "expected": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "roi": [
+            995,
+            490,
+            18,
+            20
+        ],
+        "action": "Click",
+        "post_delay": 3500,
+        "next": [
+            "执行召集"
+        ]
+    },
+    "执行召集": {
+        "recognition": "OCR",
+        "expected": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "roi": [
+            1079,
+            451,
+            15,
+            20
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "点击传送按钮2"
+        ]
+    },
+    "点击传送按钮2": {
+        "recognition": "TemplateMatch",
+        "template": "传送按钮.png",
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "下一张地图1"
+        ]
+    },
+    "下一张地图1": {
+        "timeout": 1500,
+        "recognition": "OCR",
+        "expected": [
+            "镇",
+            "洞穴"
+        ],
+        "roi": [
+            551,
+            626,
+            183,
+            40
+        ],
+        "action": "Click",
+        "target": [
+            974,
+            341,
+            1,
+            1
+        ],
+        "next": [
+            "点击传送"
+        ],
+        "on_error": [
+            "关闭传送"
+        ]
+    },
+    "关闭传送": {
+        "recognition": "OCR",
+        "expected": [
+            "移动魔法阵"
+        ],
+        "roi": [
+            158,
+            16,
+            178,
+            48
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            104,
+            41,
+            1,
+            1
+        ],
+        "next": [
+            "返回菜单1"
+        ]
+    },
+    "返回菜单1": {
+        "recognition": "TemplateMatch",
+        "template": "主菜单.png",
+        "green_mask": true,
+        "action": "Click",
+        "target": [
+            1179,
+            42,
+            2,
+            3
+        ],
+        "next": [
+            "结束"
+        ]
+    },
+    "结束": {
+        "action": "DoNothing"
+    }
+}

@@ -1,0 +1,121 @@
+{
+    "进入赛季活动": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            814,
+            621,
+            44,
+            67
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            1115,
+            369,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "next": [
+            "进入普通战斗"
+        ]
+    },
+    "进入普通战斗": {
+        "recognition": "OCR",
+        "expected": "普通战斗",
+        "roi": [
+            792,
+            604,
+            183,
+            93
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 3800,
+        "next": [
+            "赛季快速战斗"
+        ]
+    },
+    "赛季快速战斗": {
+        "recognition": "OCR",
+        "expected": "快速战斗",
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "赛季MAX"
+        ]
+    },
+    "赛季MAX": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            753,
+            350,
+            109,
+            71
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "赛季点击战斗"
+        ]
+    },
+    "赛季点击战斗": {
+        "recognition": "OCR",
+        "expected": "战斗",
+        "roi": [
+            635,
+            560,
+            133,
+            56
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "赛季副本返回"
+        ]
+    },
+    "赛季副本返回": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            639,
+            528,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "赛季回菜单1"
+        ]
+    },
+    "赛季回菜单1": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            102,
+            46,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "赛季回菜单2"
+        ]
+    },
+    "赛季回菜单2": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            139,
+            35,
+            1,
+            1
+        ],
+        "post_delay": 1000
+    }
+}

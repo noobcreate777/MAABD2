@@ -1,0 +1,149 @@
+{
+    "检查通行证位置": {
+        "recognition": "OCR",
+        "expected": [
+            "通行证"
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "通行证全部获得1"
+        ]
+    },
+    "通行证全部获得1": {
+        "recognition": "OCR",
+        "expected": [
+            "全部获得"
+        ],
+        "roi": [
+            918,
+            507,
+            183,
+            71
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "通行证点击空白1"
+        ]
+    },
+    "通行证点击空白1": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            627,
+            557,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "选择通行证1"
+        ]
+    },
+    "选择通行证1": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            222,
+            265,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "next": [
+            "通行证全部获得2"
+        ]
+    },
+    "通行证全部获得2": {
+        "recognition": "OCR",
+        "expected": [
+            "全部获得"
+        ],
+        "roi": [
+            918,
+            507,
+            183,
+            71
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "通行证点击空白2"
+        ]
+    },
+    "通行证点击空白2": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            627,
+            557,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "选择通行证2"
+        ]
+    },
+    "选择通行证2": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            214,
+            349,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "next": [
+            "通行证全部获得3"
+        ]
+    },
+    "通行证全部获得3": {
+        "recognition": "OCR",
+        "expected": [
+            "全部获得"
+        ],
+        "roi": [
+            918,
+            507,
+            183,
+            71
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "通行证点击空白3"
+        ]
+    },
+    "通行证点击空白3": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            627,
+            557,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "通行证返回"
+        ]
+    },
+    "通行证返回": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            118,
+            35,
+            1,
+            1
+        ],
+        "post_delay": 3000
+    }
+}

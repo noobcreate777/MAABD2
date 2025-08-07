@@ -1,0 +1,54 @@
+{
+    "点击邮箱": {
+        "recognition": "TemplateMatch",
+        "template": "邮箱.png",
+        "green_mask": true,
+        "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 3000,
+        "next": [
+            "邮箱领取"
+        ]
+    },
+    "邮箱领取": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            1002,
+            627,
+            187,
+            68
+        ],
+        "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 3000,
+        "next": [
+            "邮箱点击空白"
+        ]
+    },
+    "邮箱点击空白": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            627,
+            557,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "邮箱返回"
+        ]
+    },
+    "邮箱返回": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            98,
+            37,
+            1,
+            1
+        ],
+        "post_delay": 3000
+    }
+}

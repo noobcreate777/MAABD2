@@ -1,0 +1,119 @@
+{
+    "餐厅进入游戏卡": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            794,
+            611,
+            84,
+            80
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            1108,
+            630,
+            1,
+            1
+        ],
+        "next": [
+            "进入餐厅卡带"
+        ]
+    },
+    "进入餐厅卡带": {
+        "recognition": "TemplateMatch",
+        "template": "餐厅卡带.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "餐厅收菜"
+        ]
+    },
+    "餐厅收菜": {
+        "timeout": 800,
+        "recognition": "OCR",
+        "expected": [
+            "已满",
+            "结算"
+        ],
+        "roi": [
+            979,
+            610,
+            218,
+            79
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "餐厅收菜结算"
+        ],
+        "on_error": [
+            "常客收菜"
+        ]
+    },
+    "餐厅收菜结算": {
+        "recognition": "OCR",
+        "expected": [
+            "结算"
+        ],
+        "roi": [
+            590,
+            495,
+            92,
+            30
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "餐厅点击返回"
+        ]
+    },
+    "餐厅点击返回": {
+        "pre_delay": 2500,
+        "action": "Click",
+        "target": [
+            614,
+            577,
+            1,
+            1
+        ],
+        "post_delay": 800,
+        "next": [
+            "常客收菜"
+        ]
+    },
+    "常客收菜": {
+        "recognition": "OCR",
+        "expected": [
+            "常客"
+        ],
+        "roi": [
+            94,
+            186,
+            82,
+            84
+        ],
+        "action": "Click",
+        "target": [
+            133,
+            226,
+            1,
+            1
+        ],
+        "post_delay": 800,
+        "next": [
+            "餐厅返回"
+        ]
+    },
+    "餐厅返回": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            1179,
+            41,
+            1,
+            1
+        ],
+        "post_delay": 3500
+    }
+}

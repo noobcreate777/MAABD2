@@ -1,0 +1,287 @@
+{
+    "副本进入游戏卡珍藏集": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            814,
+            621,
+            44,
+            67
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            1123,
+            640,
+            1,
+            3
+        ],
+        "post_delay": 2000,
+        "next": [
+            "进入卡带"
+        ]
+    },
+    "进入卡带": {
+        "recognition": "OCR",
+        "expected": "游戏卡珍藏集",
+        "action": "Click",
+        "target": [
+            213,
+            204,
+            1,
+            1
+        ],
+        "post_delay": 3500,
+        "next": [
+            "选择副本"
+        ]
+    },
+    "选择副本": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "post_delay": 3500,
+        "next": [
+            "选择第九章"
+        ]
+    },
+    "选择第九章": {
+        "recognition": "OCR",
+        "expected": "守山人休息处",
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": []
+    },
+    "第九章快速狩猎": {
+        "recognition": "OCR",
+        "expected": "快速狩猎",
+        "roi": [
+            1007,
+            627,
+            119,
+            41
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "第九章确认狩猎"
+        ]
+    },
+    "第九章确认狩猎": {
+        "recognition": "OCR",
+        "expected": "狩猎",
+        "roi": [
+            646,
+            530,
+            109,
+            33
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "第九章返回"
+        ]
+    },
+    "第九章返回": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            639,
+            528,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": []
+    },
+    "选择金币副本": {
+        "recognition": "TemplateMatch",
+        "template": "金币副本.png",
+        "green_mask": true,
+        "roi": [
+            81,
+            76,
+            113,
+            320
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "金币副本快速狩猎"
+        ]
+    },
+    "金币副本快速狩猎": {
+        "recognition": "OCR",
+        "expected": "快速狩猎",
+        "roi": [
+            1007,
+            627,
+            119,
+            41
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "金币副本点击MAX"
+        ]
+    },
+    "金币副本点击MAX": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "green_mask": true,
+        "roi": [
+            761,
+            373,
+            95,
+            43
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "金币副本确认狩猎"
+        ]
+    },
+    "金币副本确认狩猎": {
+        "recognition": "OCR",
+        "expected": "狩猎",
+        "roi": [
+            646,
+            530,
+            109,
+            33
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "金币副本返回"
+        ]
+    },
+    "金币副本返回": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            639,
+            528,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "选择圣石副本"
+        ]
+    },
+    "选择圣石副本": {
+        "recognition": "TemplateMatch",
+        "template": "圣石副本.png",
+        "green_mask": true,
+        "roi": [
+            81,
+            76,
+            113,
+            320
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "圣石副本快速狩猎"
+        ]
+    },
+    "圣石副本快速狩猎": {
+        "recognition": "OCR",
+        "expected": "快速狩猎",
+        "roi": [
+            1007,
+            627,
+            119,
+            41
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "圣石副本点击MAX"
+        ]
+    },
+    "圣石副本点击MAX": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "green_mask": true,
+        "roi": [
+            761,
+            373,
+            95,
+            43
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "圣石副本确认狩猎"
+        ]
+    },
+    "圣石副本确认狩猎": {
+        "recognition": "OCR",
+        "expected": "狩猎",
+        "roi": [
+            646,
+            530,
+            109,
+            33
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "圣石副本返回"
+        ]
+    },
+    "圣石副本返回": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            639,
+            528,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "副本返回"
+        ]
+    },
+    "副本返回": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            102,
+            46,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "副本返回菜单"
+        ]
+    },
+    "副本返回菜单": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "green_mask": true,
+        "action": "Click",
+        "target": [
+            1179,
+            42,
+            2,
+            3
+        ],
+        "next": []
+    }
+}

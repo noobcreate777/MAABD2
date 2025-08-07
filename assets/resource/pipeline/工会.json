@@ -1,0 +1,39 @@
+{
+    "点击公会": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "roi": [
+            270,
+            91,
+            76,
+            78
+        ],
+        "pre_delay": 500,
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "确认公会奖励"
+        ]
+    },
+    "确认公会奖励": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "pre_delay": 500,
+        "roi": [
+            182,
+            17,
+            104,
+            44
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": []
+    },
+    "公会返回": {
+        "recognition": "TemplateMatch",
+        "template": "公会返回.png",
+        "pre_delay": 500,
+        "action": "Click",
+        "post_delay": 500
+    }
+}
