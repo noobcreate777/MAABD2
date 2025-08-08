@@ -16,7 +16,7 @@
 4.技能过场动画设置为关闭</br>
 5.将技能位置摆放成下图这样,无视绿色图案 </br>**
 ![技能位置](assets\resource\image\MD\技能位置.png "技能位置")
-图片打不开就看下方网盘里的图片
+图片打不开就看下方网盘里的图片</br>
 https://pan.baidu.com/s/1Cbh8gHDIXRcqWrW9ujbjuw?pwd=ba7e 提取码: ba7e
 
 # 注意事项
