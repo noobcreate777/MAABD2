@@ -51,7 +51,9 @@
         "pre_delay": 1000,
         "action": "Click",
         "post_delay": 1000,
-        "next": []
+        "next": [
+            "第九章快速狩猎"
+        ]
     },
     "第九章快速狩猎": {
         "recognition": "OCR",
@@ -95,7 +97,9 @@
             1
         ],
         "post_delay": 1000,
-        "next": []
+        "next": [
+            "选择金币副本"
+        ]
     },
     "选择金币副本": {
         "recognition": "TemplateMatch",

@@ -1,0 +1,88 @@
+{
+    "主返回菜单": {
+        "next": [
+            "返回菜单1",
+            "返回菜单2",
+            "返回菜单3"
+        ]
+    },
+    "返回菜单1": {
+        "recognition": "TemplateMatch",
+        "template": "总返回/返回按钮1.png",
+        "green_mask": true,
+        "roi": [
+            4,
+            3,
+            430,
+            268
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "返回菜单成功"
+        ],
+    },
+    "返回菜单2": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "green_mask": true,
+        "roi": [
+            4,
+            3,
+            430,
+            268
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            1184,
+            45,
+            1,
+            1
+        ],
+        "post_delay": 5000,
+        "next": [
+            "返回菜单成功"
+        ]
+    },
+    "返回菜单3": {
+        "recognition": "TemplateMatch",
+        "template": "总返回/返回按钮2.png",
+        "green_mask": true,
+        "roi": [
+            4,
+            3,
+            430,
+            268
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "next": [
+            "返回菜单成功"
+        ],
+        "post_delay": 5000
+    },
+    "返回菜单成功": {
+        "timeout": 800,
+        "recognition": "OCR",
+        "expected": "礼包",
+        "inverse": true,
+        "roi": [
+            895,
+            619,
+            58,
+            70
+        ],
+        "action": "DoNothing",
+        "next": [
+            "主返回菜单"
+        ],
+        "on_error": [
+            "菜单啥也不干"
+        ]
+    },
+    "菜单啥也不干": {
+        "action": "DoNothing"
+    }
+}

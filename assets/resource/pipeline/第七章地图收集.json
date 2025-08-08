@@ -1,262 +1,503 @@
 {
+    "第七章判断主菜单": {
+        "recognition": "OCR",
+        "expected": "礼包",
+        "roi": [
+            895,
+            619,
+            58,
+            70
+        ],
+        "next": [
+            "第七章进入卡带"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ]
+    },
     "第七章进入卡带": {
         "recognition": "OCR",
-        "expected": "商店",
+        "expected": "礼包",
         "roi": [
-            814,
-            621,
-            44,
-            67
+            895,
+            619,
+            58,
+            70
         ],
-        "pre_delay": 2000,
         "action": "Click",
         "target": [
-            1111,
-            631,
+            1119,
+            639,
             1,
             1
         ],
-        "post_delay": 2000,
         "next": [
-            "划动主线"
+            "第七章向上划动游戏卡"
+        ],
+        "on_error": [
+            "主返回菜单"
         ]
     },
-    "划动主线": {
+    "第七章向上划动游戏卡": {
         "recognition": "OCR",
         "expected": "游戏卡珍藏集",
         "roi": [
-            184,
-            18,
-            154,
-            38
+            10,
+            6,
+            375,
+            73
         ],
         "action": "Swipe",
         "begin": [
-            350,
-            212,
+            659,
+            116,
             1,
             1
         ],
         "end": [
-            801,
-            212,
+            659,
+            623,
             1,
             1
         ],
-        "post_delay": 5000,
         "next": [
-            "选中第七章"
-        ]
+            "第七章向左划动游戏卡1"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ],
+        "post_delay": 4000
     },
-    "选中第七章": {
-        "recognition": "TemplateMatch",
-        "template": "第七章2.png",
-        "target": true,
-        "pre_delay": 1000,
-        "action": "Click",
-        "post_delay": 3500,
-        "next": [
-            "点击传送按钮1"
-        ]
-    },
-    "点击传送按钮1": {
-        "recognition": "TemplateMatch",
-        "template": "传送按钮.png",
-        "green_mask": true,
-        "action": "Click",
-        "timeout": 800,
-        "post_delay": 2000,
-        "next": [
-            "点击切换地图1"
-        ]
-    },
-    "点击切换地图1": {
-        "timeout": 3500,
+    "第七章向左划动游戏卡1": {
         "recognition": "OCR",
-        "expected": [
-            "战斗",
-            "拉勒凯旅馆",
-            "罗戴夫旅馆",
-            "华特波尔旅馆"
-        ],
+        "expected": "剧情游戏卡",
         "roi": [
-            532,
-            617,
-            223,
-            47
+            108,
+            93,
+            179,
+            44
+        ],
+        "action": "Swipe",
+        "begin": [
+            169,
+            210,
+            1,
+            1
+        ],
+        "end": [
+            1142,
+            210,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向左划动游戏卡2"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ],
+        "post_delay": 4000
+    },
+    "第七章向左划动游戏卡2": {
+        "roi": [
+            108,
+            93,
+            179,
+            44
+        ],
+        "action": "Swipe",
+        "begin": [
+            336,
+            210,
+            1,
+            1
+        ],
+        "end": [
+            911,
+            210,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向右划动游戏卡1"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ],
+        "post_delay": 4000
+    },
+    "第七章向右划动游戏卡1": {
+        "action": "Swipe",
+        "begin": [
+            962,
+            213,
+            1,
+            1
+        ],
+        "end": [
+            551,
+            213,
+            1,
+            1
+        ],
+        "next": [
+            "进入第七章卡带"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ],
+        "post_delay": 4000
+    },
+    "进入第七章卡带": {
+        "recognition": "TemplateMatch",
+        "template": "第七章/第七章.png",
+        "action": "Click",
+        "next": [
+            "打开第七章地图1"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ]
+    },
+    "打开第七章地图1": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "target": [
+            880,
+            568,
+            1,
+            1
+        ],
+        "next": [
+            "第七章判断地图位置"
+        ]
+    },
+    "第七章判断地图位置": {
+        "timeout": 500,
+        "inverse": true,
+        "recognition": "TemplateMatch",
+        "template": "第七章/第七章地图位置.png",
+        "roi": [
+            389,
+            597,
+            501,
+            100
+        ],
+        "next": [
+            "第七章向左切换地图1"
+        ],
+        "on_error": [
+            "第七章关闭地图1"
+        ]
+    },
+    "第七章关闭地图1": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
         ],
         "action": "Click",
-        "pre_delay": 1000,
+        "target": [
+            102,
+            36,
+            3,
+            5
+        ],
+        "next": [
+            "第七章探查"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ]
+    },
+    "第七章向左切换地图1": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
+        "action": "Click",
         "target": [
             303,
+            343,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向左切换地图2"
+        ]
+    },
+    "第七章向左切换地图2": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
+        "action": "Click",
+        "target": [
+            303,
+            343,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向左切换地图3"
+        ]
+    },
+    "第七章向左切换地图3": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
+        "action": "Click",
+        "target": [
+            303,
+            343,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向左切换地图4"
+        ]
+    },
+    "第七章向左切换地图4": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
+        "action": "Click",
+        "target": [
+            303,
+            343,
+            1,
+            1
+        ],
+        "next": [
+            "第七章传送1"
+        ]
+    },
+    "第七章传送1": {
+        "recognition": "TemplateMatch",
+        "template": "传送点.png",
+        "green_mask": true,
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "第七章探查"
+        ]
+    },
+    "第七章探查": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "target": [
+            1014,
+            649,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "第七章吸收1"
+        ]
+    },
+    "第七章吸收1": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "roi": [
+            79,
+            144,
+            81,
+            83
+        ],
+        "target": [
+            975,
+            562,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "打开第七章地图2"
+        ]
+    },
+    "打开第七章地图2": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "target": [
+            880,
+            568,
+            1,
+            1
+        ],
+        "next": [
+            "第七章向右切换地图1"
+        ]
+    },
+    "第七章向右切换地图1": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
+        "action": "Click",
+        "target": [
+            975,
             342,
             1,
             1
         ],
         "next": [
-            "点击切换地图1"
-        ],
-        "on_error": [
-            "点击传送"
+            "第七章传送2"
         ]
     },
-    "点击传送": {
+    "第七章传送2": {
         "recognition": "TemplateMatch",
-        "template": "传送点1.png",
+        "template": "传送点.png",
         "green_mask": true,
         "action": "Click",
-        "post_delay": 3500,
-        "next": [
-            "执行探查"
-        ]
-    },
-    "执行探查": {
-        "recognition": "TemplateMatch",
-        "template": "主菜单.png",
-        "pre_delay": 3500,
-        "action": "Click",
-        "target": [
-            1008,
-            649,
-            6,
-            7
-        ],
-        "next": [
-            "执行吸收"
-        ]
-    },
-    "执行吸收": {
-        "recognition": "TemplateMatch",
-        "template": "吸收.png",
-        "roi": [
-            939,
-            528,
-            72,
-            72
-        ],
-        "action": "Click",
-        "post_delay": 3500,
-        "next": [
-            "执行吸收2"
-        ]
-    },
-    "执行吸收2": {
-        "recognition": "OCR",
-        "expected": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "roi": [
-            995,
-            490,
-            18,
-            20
-        ],
-        "action": "Click",
-        "post_delay": 3500,
-        "next": [
-            "执行召集"
-        ]
-    },
-    "执行召集": {
-        "recognition": "OCR",
-        "expected": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "roi": [
-            1079,
-            451,
-            15,
-            20
-        ],
-        "action": "Click",
-        "post_delay": 4000,
-        "next": [
-            "点击传送按钮2"
-        ]
-    },
-    "点击传送按钮2": {
-        "recognition": "TemplateMatch",
-        "template": "传送按钮.png",
-        "green_mask": true,
-        "action": "Click",
-        "next": [
-            "下一张地图1"
-        ]
-    },
-    "下一张地图1": {
-        "timeout": 1500,
-        "recognition": "OCR",
-        "expected": [
-            "镇",
-            "洞穴"
-        ],
-        "roi": [
-            551,
-            626,
-            183,
-            40
-        ],
-        "action": "Click",
-        "target": [
-            974,
-            341,
-            1,
-            1
-        ],
-        "next": [
-            "点击传送"
-        ],
-        "on_error": [
-            "关闭传送"
-        ]
-    },
-    "关闭传送": {
-        "recognition": "OCR",
-        "expected": [
-            "移动魔法阵"
-        ],
-        "roi": [
-            158,
-            16,
-            178,
-            48
-        ],
         "pre_delay": 1000,
+        "next": [
+            "第七章吸收2"
+        ]
+    },
+    "第七章吸收2": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "roi": [
+            79,
+            144,
+            81,
+            83
+        ],
+        "target": [
+            975,
+            562,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "第七章召集1"
+        ]
+    },
+    "第七章召集1": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
         "action": "Click",
         "target": [
-            104,
-            41,
+            1098,
+            445,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "打开第七章地图3"
+        ]
+    },
+    "打开第七章地图3": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "target": [
+            880,
+            568,
             1,
             1
         ],
         "next": [
-            "返回菜单1"
+            "第七章向右切换地图2"
         ]
     },
-    "返回菜单1": {
-        "recognition": "TemplateMatch",
-        "template": "主菜单.png",
-        "green_mask": true,
+    "第七章向右切换地图2": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            152,
+            11,
+            189,
+            60
+        ],
         "action": "Click",
         "target": [
-            1179,
-            42,
-            2,
-            3
+            975,
+            342,
+            1,
+            1
         ],
         "next": [
-            "结束"
+            "第七章传送3"
         ]
     },
-    "结束": {
-        "action": "DoNothing"
+    "第七章传送3": {
+        "recognition": "TemplateMatch",
+        "template": "传送点.png",
+        "green_mask": true,
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "第七章吸收3"
+        ]
+    },
+    "第七章吸收3": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "roi": [
+            79,
+            144,
+            81,
+            83
+        ],
+        "target": [
+            975,
+            562,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "第七章召集2"
+        ]
+    },
+    "第七章召集2": {
+        "recognition": "TemplateMatch",
+        "template": "副本.png",
+        "action": "Click",
+        "target": [
+            1098,
+            445,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "next": [
+            "主返回菜单"
+        ]
     }
 }

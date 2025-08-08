@@ -19,14 +19,13 @@
         ],
         "post_delay": 2000,
         "next": [
-            "选择卡池"
+            "选择卡池1"
         ],
         "on_error": [
-            "识别失败"
+            "主返回菜单"
         ]
     },
-    "选择卡池": {
-        "timeout": 800,
+    "选择卡池1": {
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "抽抽乐提示.png",
@@ -46,14 +45,13 @@
         ],
         "post_delay": 1500,
         "next": [
-            "抽卡确认",
-            "划动卡池"
+            "抽卡确认1"
         ],
         "on_error": [
-            "抽抽乐完成"
+            "主返回菜单"
         ]
     },
-    "抽卡确认": {
+    "抽卡确认1": {
         "recognition": "OCR",
         "expected": "免费1次",
         "roi": [
@@ -66,10 +64,10 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
-            "购买抽卡"
+            "购买抽卡1"
         ]
     },
-    "购买抽卡": {
+    "购买抽卡1": {
         "recognition": "TemplateMatch",
         "template": "抽抽乐购买.png",
         "roi": [
@@ -82,10 +80,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "跳过抽卡动画"
+            "跳过抽卡动画1"
         ]
     },
-    "跳过抽卡动画": {
+    "跳过抽卡动画1": {
         "timeout": 1000,
         "recognition": "TemplateMatch",
         "green_mask": true,
@@ -99,13 +97,10 @@
         "pre_delay": 2000,
         "action": "Click",
         "next": [
-            "返回卡池"
-        ],
-        "on_error": [
-            "购买抽卡"
+            "返回卡池1"
         ]
     },
-    "返回卡池": {
+    "返回卡池1": {
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "抽抽乐返回.png",
@@ -118,10 +113,10 @@
         "pre_delay": 1000,
         "action": "Click",
         "next": [
-            "划动卡池"
+            "划动卡池1"
         ]
     },
-    "划动卡池": {
+    "划动卡池1": {
         "action": "Swipe",
         "begin": [
             204,
@@ -137,19 +132,98 @@
         ],
         "post_delay": 2000,
         "next": [
-            "选择卡池"
+            "选择卡池2"
         ]
     },
-    "抽抽乐完成": {
+    "选择卡池2": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "抽抽乐提示.png",
+        "roi": [
+            257,
+            138,
+            40,
+            392
+        ],
+        "pre_delay": 1500,
         "action": "Click",
-        "target": [
-            116,
-            41,
-            1,
-            1
+        "target_offset": [
+            -50,
+            20,
+            0,
+            0
+        ],
+        "post_delay": 1500,
+        "next": [
+            "抽卡确认2"
+        ],
+        "on_error": [
+            "主返回菜单"
         ]
     },
-    "识别失败": {
-        "action": "DoNothing"
+    "抽卡确认2": {
+        "recognition": "OCR",
+        "expected": "免费1次",
+        "roi": [
+            948,
+            634,
+            67,
+            22
+        ],
+        "pre_delay": 1500,
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "购买抽卡2"
+        ]
+    },
+    "购买抽卡2": {
+        "recognition": "TemplateMatch",
+        "template": "抽抽乐购买.png",
+        "roi": [
+            472,
+            337,
+            343,
+            227
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "跳过抽卡动画2"
+        ]
+    },
+    "跳过抽卡动画2": {
+        "timeout": 1000,
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "抽抽乐跳过.png",
+        "roi": [
+            1137,
+            26,
+            46,
+            41
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "next": [
+            "返回卡池2"
+        ]
+    },
+    "返回卡池2": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": "抽抽乐返回.png",
+        "roi": [
+            0,
+            15,
+            169,
+            51
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "next": [
+            "主返回菜单"
+        ]
     }
 }

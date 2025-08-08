@@ -25,10 +25,10 @@
         "recognition": "OCR",
         "expected": "普通战斗",
         "roi": [
-            792,
-            604,
-            183,
-            93
+            335,
+            494,
+            156,
+            184
         ],
         "pre_delay": 2000,
         "action": "Click",
@@ -90,32 +90,7 @@
         ],
         "post_delay": 1000,
         "next": [
-            "赛季回菜单1"
+            "主返回菜单"
         ]
-    },
-    "赛季回菜单1": {
-        "pre_delay": 2000,
-        "action": "Click",
-        "target": [
-            102,
-            46,
-            1,
-            1
-        ],
-        "post_delay": 1000,
-        "next": [
-            "赛季回菜单2"
-        ]
-    },
-    "赛季回菜单2": {
-        "pre_delay": 2000,
-        "action": "Click",
-        "target": [
-            139,
-            35,
-            1,
-            1
-        ],
-        "post_delay": 1000
     }
 }

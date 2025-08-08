@@ -20,12 +20,22 @@
             "进入PVP卡带"
         ]
     },
+    "PVP段位变化1": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "开始PVP"
+        ]
+    },
     "进入PVP卡带": {
         "recognition": "TemplateMatch",
-        "template": "PVP.png",
+        "template": "PVP/PVP.png",
         "action": "Click",
         "post_delay": 5000,
         "next": [
+            "PVP段位变化1",
             "开始PVP"
         ]
     },
@@ -120,7 +130,7 @@
     "仅使用免费鸡尾酒": {
         "timeout": 500,
         "recognition": "TemplateMatch",
-        "template": "开关_关.png",
+        "template": "PVP/开关_关.png",
         "roi": [
             883,
             243,
@@ -161,7 +171,7 @@
     },
     "开始战斗": {
         "recognition": "TemplateMatch",
-        "template": "10倍PVP.png",
+        "template": "PVP/10倍PVP.png",
         "roi": [
             587,
             538,
@@ -211,121 +221,7 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "PVP返回主界面"
-        ]
-    },
-    "PVP返回主界面": {
-        "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "roi": [
-            92,
-            146,
-            57,
-            71
-        ],
-        "pre_delay": 1000,
-        "action": "Click",
-        "target": [
-            1180,
-            46,
-            1,
-            1
-        ],
-        "post_delay": 3500,
-        "next": [
-            "恢复第十三章位置"
-        ]
-    },
-    "恢复第十三章位置": {
-        "recognition": "OCR",
-        "expected": "商店",
-        "roi": [
-            794,
-            611,
-            84,
-            80
-        ],
-        "pre_delay": 1000,
-        "action": "Click",
-        "target": [
-            1108,
-            630,
-            1,
-            1
-        ],
-        "next": [
-            "PVP纵向划屏幕"
-        ]
-    },
-    "PVP纵向划屏幕": {
-        "recognition": "OCR",
-        "expected": "游戏卡珍藏集",
-        "action": "Swipe",
-        "begin": [
-            660,
-            186,
-            1,
-            1
-        ],
-        "end": [
-            660,
-            482,
-            1,
-            1
-        ],
-        "post_delay": 3800,
-        "next": [
-            "PVP横向划屏幕1"
-        ]
-    },
-    "PVP横向划屏幕1": {
-        "pre_delay": 500,
-        "action": "Swipe",
-        "begin": [
-            921,
-            200,
-            1,
-            1
-        ],
-        "end": [
-            435,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 3800,
-        "next": [
-            "PVP横向划屏幕2"
-        ]
-    },
-    "PVP横向划屏幕2": {
-        "pre_delay": 500,
-        "action": "Swipe",
-        "begin": [
-            921,
-            200,
-            1,
-            1
-        ],
-        "end": [
-            435,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 3800,
-        "next": [
-            "PVP进入第十三章"
-        ]
-    },
-    "PVP进入第十三章": {
-        "recognition": "TemplateMatch",
-        "template": "第十三章.png",
-        "pre_delay": 1000,
-        "action": "Click",
-        "post_delay": 3500,
-        "next": [
-            "第十三章返回菜单1"
+            "主返回菜单"
         ]
     },
     "转运战斗次数MAX": {

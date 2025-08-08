@@ -27,7 +27,15 @@
         ],
         "action": "Click",
         "post_delay": 500,
-        "next": []
+        "target": [
+            342,
+            560,
+            1,
+            1
+        ],
+        "next": [
+            "公会返回"
+        ]
     },
     "公会返回": {
         "recognition": "TemplateMatch",
