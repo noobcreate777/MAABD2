@@ -15,7 +15,7 @@
 3.游戏分辨率设置为FHD</br>
 4.技能过场动画设置为关闭</br>
 5.将技能位置摆放成下图这样,无视绿色图案。若没有图片，则使用百度网盘连接查看</br>
-![技能位置](assets\resource\image\MD\技能位置.png "技能位置")</br>
+![技能位置](assets\resource\image\MD\skill.png "技能位置")</br>
 <https://pan.baidu.com/s/1Cbh8gHDIXRcqWrW9ujbjuw?pwd=ba7e> 提取码: ba7e </br>
 
 # 注意事项
