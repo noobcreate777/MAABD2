@@ -28,8 +28,8 @@
         "action": "Click",
         "post_delay": 500,
         "target": [
-            342,
-            560,
+            1209,
+            643,
             1,
             1
         ],

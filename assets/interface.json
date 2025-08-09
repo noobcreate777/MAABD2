@@ -1,4 +1,6 @@
 {
+    "version": "v0.04",
+    "message": "请将模拟器设置为1920*1080分辨率,并按照目录下skill.png设置技能位置",
     "controller": [
         {
             "name": "安卓端",

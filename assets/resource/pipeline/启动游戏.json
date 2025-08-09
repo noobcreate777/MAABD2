@@ -10,24 +10,30 @@
     },
     "检查启动页面": {
         "recognition": "TemplateMatch",
-        "template": "进入游戏.png",
-        "target": true,
-        "action": "Click",
-        //5秒后执行"回到主菜单"
-        "post_delay": 5000,
+        "template": "启动页面设置.png",
+        "green_mask": true,
         "next": [
             "支付失败",
-            "确认收菜",
-            "检查启动页面"
+            "进入游戏"
         ]
     },
     "支付失败": {
         "recognition": "OCR",
         "expected": "支付失败",
-        "target": true,
         "action": "Click",
         "next": [
             "检查启动页面"
+        ]
+    },
+    "进入游戏": {
+        "recognition": "TemplateMatch",
+        "template": "进入游戏.png",
+        "action": "Click",
+        //5秒后执行"回到主菜单"
+        "post_delay": 5000,
+        "next": [
+            "确认收菜",
+            "回到主菜单"
         ]
     },
     "回到主菜单": {
