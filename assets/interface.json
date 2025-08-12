@@ -4,7 +4,7 @@
     "controller": [
         {
             "name": "安卓端",
-            "type": "Adb",
+            "type": "Adb"
         },
         {
             "name": "PC端",
