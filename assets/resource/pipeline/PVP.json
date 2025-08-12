@@ -136,7 +136,8 @@
             "rate_limit": 30000
         },
         "next": [
-            "PVP结算1"
+            "PVP结算1",
+            "PVP段位变化2"
         ]
     },
     "PVP结算1": {
@@ -158,17 +159,18 @@
         ],
         "post_delay": 500,
         "next": [
-            "PVP结算2"
+            "PVP结算2",
+            "PVP段位变化2"
         ]
     },
     "PVP结算2": {
         "recognition": "OCR",
-        "expected": "离开",
+        "expected": "确认",
         "roi": [
-            678,
-            462,
-            601,
-            257
+            329,
+            475,
+            617,
+            232
         ],
         "pre_delay": 500,
         "action": "Click",
@@ -181,6 +183,9 @@
     "PVP段位变化2": {
         "recognition": "OCR",
         "expected": "确认",
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "主返回菜单"
+        ]
     }
 }

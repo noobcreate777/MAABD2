@@ -35,7 +35,9 @@
             1
         ],
         "post_delay": 3000,
-        "next": []
+        "next": [
+            "点击每周任务"
+        ]
     },
     "点击每周任务": {
         "recognition": "OCR",
