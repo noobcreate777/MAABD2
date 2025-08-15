@@ -1,5 +1,5 @@
 {
-    "version": "v0.05",
+    "version": "v0.07",
     "message": "请将模拟器设置为1920*1080分辨率",
     "controller": [
         {
@@ -8,8 +8,7 @@
         },
         {
             "name": "PC端",
-            "type": "Win32",
-            "Input": "SendMessage"
+            "type": "Win32"
         }
     ],
     "resource": [
@@ -23,8 +22,7 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "BD2启动",
-            "doc": "请不要在官方账号下提及到本应用"
+            "entry": "BD2启动"
         },
         {
             "name": "签到",
