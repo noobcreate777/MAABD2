@@ -3,10 +3,10 @@
         "recognition": "OCR",
         "expected": "商店",
         "roi": [
-            794,
-            611,
-            84,
-            80
+            748,
+            598,
+            176,
+            107
         ],
         "pre_delay": 1000,
         "action": "Click",

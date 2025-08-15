@@ -3,10 +3,10 @@
         "recognition": "OCR",
         "expected": "商店",
         "roi": [
-            814,
-            621,
-            44,
-            67
+            748,
+            598,
+            176,
+            107
         ],
         "pre_delay": 2000,
         "action": "Click",
@@ -25,10 +25,10 @@
         "recognition": "OCR",
         "expected": "普通战斗",
         "roi": [
-            335,
-            494,
-            156,
-            184
+            10,
+            464,
+            1269,
+            252
         ],
         "pre_delay": 2000,
         "action": "Click",

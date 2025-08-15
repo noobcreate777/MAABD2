@@ -1,44 +1,23 @@
 {
-    "副本进入游戏卡珍藏集": {
+    "副本检查是否主页": {
         "recognition": "OCR",
         "expected": "商店",
         "roi": [
-            814,
-            621,
-            44,
-            67
+            748,
+            598,
+            176,
+            107
         ],
-        "pre_delay": 2000,
-        "action": "Click",
-        "target": [
-            1123,
-            640,
-            1,
-            3
-        ],
-        "post_delay": 2000,
         "next": [
-            "进入卡带"
+            "进入副本"
+        ],
+        "on_error": [
+            "主返回菜单"
         ]
     },
-    "进入卡带": {
+    "进入副本": {
         "recognition": "OCR",
-        "expected": "游戏卡珍藏集",
-        "action": "Click",
-        "target": [
-            213,
-            204,
-            1,
-            1
-        ],
-        "post_delay": 3500,
-        "next": [
-            "选择副本"
-        ]
-    },
-    "选择副本": {
-        "recognition": "TemplateMatch",
-        "template": "副本.png",
+        "expected": "快速狩猎",
         "action": "Click",
         "post_delay": 3500,
         "next": [
@@ -270,22 +249,6 @@
             1,
             1
         ],
-        "post_delay": 1000,
-        "next": [
-            "副本返回菜单"
-        ]
-    },
-    "副本返回菜单": {
-        "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "green_mask": true,
-        "action": "Click",
-        "target": [
-            1179,
-            42,
-            2,
-            3
-        ],
-        "next": []
+        "post_delay": 1000
     }
 }

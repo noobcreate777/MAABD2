@@ -3,10 +3,10 @@
         "recognition": "OCR",
         "expected": "任务",
         "roi": [
-            539,
-            615,
-            69,
-            80
+            56,
+            609,
+            879,
+            94
         ],
         "pre_delay": 1000,
         "action": "Click",
