@@ -54,7 +54,24 @@
         //5秒后执行"回到主菜单"
         "post_delay": 10000,
         "next": [
-            "确认收菜",
+            "确认收菜"
+        ]
+    },
+    "确认收菜": {
+        "timeout": 5000,
+        "recognition": "TemplateMatch",
+        "template": "每日感叹号.png",
+        "green_mask": true,
+        "roi": [
+            826,
+            516,
+            105,
+            100
+        ],
+        "pre_delay": 4000,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
             "回到主菜单"
         ]
     },
@@ -77,23 +94,5 @@
         "pre_delay": 1000,
         "action": "Click",
         "post_delay": 5000
-    },
-    "确认收菜": {
-        "timeout": 5000,
-        "recognition": "TemplateMatch",
-        "template": "每日感叹号.png",
-        "green_mask": true,
-        "roi": [
-            826,
-            516,
-            105,
-            100
-        ],
-        "pre_delay": 4000,
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "回到主菜单"
-        ]
     }
 }
