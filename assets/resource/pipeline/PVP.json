@@ -26,6 +26,7 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
+            "PVP赛季结算",
             "PVP段位变化1",
             "开始PVP"
         ]
@@ -178,6 +179,26 @@
         "next": [
             "PVP段位变化2",
             "主返回菜单"
+        ]
+    },
+    "PVP赛季结算": {
+        "recognition": "OCR",
+        "expected": "赛季奖励",
+        "roi": [
+            532,
+            47,
+            704,
+            635
+        ],
+        "action": "Click",
+        "target": [
+            1163,
+            643,
+            1,
+            1
+        ],
+        "next": [
+            "PVP段位变化1"
         ]
     },
     "PVP段位变化2": {

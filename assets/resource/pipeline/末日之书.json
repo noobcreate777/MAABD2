@@ -1,0 +1,143 @@
+{
+    "末日之书判断菜单": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            748,
+            598,
+            176,
+            107
+        ],
+        "next": [
+            "末日之书进入卡带"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ]
+    },
+    "末日之书进入卡带": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            748,
+            598,
+            176,
+            107
+        ],
+        "action": "Click",
+        "target": [
+            1119,
+            639,
+            1,
+            1
+        ],
+        "next": [
+            "末日之书向上划动游戏卡"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ]
+    },
+    "末日之书向上划动游戏卡": {
+        "recognition": "OCR",
+        "expected": "游戏卡珍藏集",
+        "roi": [
+            10,
+            6,
+            375,
+            73
+        ],
+        "action": "Swipe",
+        "begin": [
+            659,
+            116,
+            1,
+            1
+        ],
+        "end": [
+            659,
+            623,
+            1,
+            1
+        ],
+        "next": [
+            "进入末日之书"
+        ],
+        "on_error": [
+            "主返回菜单"
+        ],
+        "post_delay": 4000
+    },
+    "进入末日之书": {
+        "recognition": "TemplateMatch",
+        "template": "末日之书/末日之书卡带.png",
+        "pre_delay": 1000,
+        "action": "Click",
+        "next": [
+            "进入末日之书战斗页面"
+        ]
+    },
+    "进入末日之书战斗页面": {
+        "recognition": "TemplateMatch",
+        "template": "末日之书/末日之书战斗.png",
+        "action": "Click",
+        "next": [
+            "末日之书开始战斗"
+        ]
+    },
+    "末日之书开始战斗": {
+        "recognition": "OCR",
+        "expected": "去战斗",
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "末日之书跳过"
+        ]
+    },
+    "末日之书跳过": {
+        "recognition": "TemplateMatch",
+        "template": "抽抽乐跳过.png",
+        "green_mask": true,
+        "pre_delay": 3000,
+        "action": "Click",
+        "next": [
+            "末日之书离开"
+        ]
+    },
+    "末日之书离开": {
+        "recognition": "OCR",
+        "expected": "离开",
+        "roi": [
+            720,
+            610,
+            559,
+            109
+        ],
+        "pre_delay": 1500,
+        "action": "Click",
+        "next": [
+            "末日之书新纪录",
+            "主返回菜单"
+        ]
+    },
+    "末日之书新纪录": {
+        "recognition": "OCR",
+        "expected": "创造新纪录",
+        "roi": [
+            637,
+            149,
+            519,
+            479
+        ],
+        "action": "Click",
+        "target": [
+            1053,
+            622,
+            1,
+            1
+        ],
+        "next": [
+            "主返回菜单"
+        ]
+    }
+}
