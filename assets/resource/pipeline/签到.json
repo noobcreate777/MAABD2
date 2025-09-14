@@ -3,12 +3,6 @@
         "timeout": 800,
         "recognition": "OCR",
         "expected": "签到成功",
-        "roi": [
-            519,
-            129,
-            187,
-            128
-        ],
         "pre_delay": 1000,
         "action": "Click",
         "target": [

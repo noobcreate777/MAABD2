@@ -96,7 +96,7 @@
     },
     "末日之书跳过": {
         "recognition": "TemplateMatch",
-        "template": "抽抽乐跳过.png",
+        "template": "抽抽乐/抽抽乐跳过.png",
         "green_mask": true,
         "pre_delay": 3000,
         "action": "Click",

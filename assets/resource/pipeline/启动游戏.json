@@ -3,7 +3,7 @@
         "action": "StartApp",
         "package": "com.neowizgames.game.browndust2",
         //30秒后执行"检查启动页面"
-        "post_delay": 30000,
+        "post_delay": 35000,
         "next": [
             "检查启动页面"
         ]
@@ -24,6 +24,7 @@
         "recognition": "TemplateMatch",
         "template": "下载资源.png",
         "action": "Click",
+        "post_delay": 300000,
         "next": [
             "检查启动页面"
         ]
@@ -54,7 +55,7 @@
         //5秒后执行"回到主菜单"
         "post_delay": 10000,
         "next": [
-            "PVP判断变化",
+            "启动游戏PVP界面",
             "确认收菜"
         ]
     },
@@ -76,20 +77,65 @@
             "回到主菜单"
         ]
     },
+    "启动游戏PVP界面": {
+        "post_delay": 3000,
+        "next": [
+            "PVP判断变化",
+            "pvp判断赛季奖励",
+            "pvp段位变化",
+            "确认收菜",
+            "回到主菜单"
+        ]
+    },
     "PVP判断变化": {
         "recognition": "OCR",
         "expected": "确认",
         "roi": [
-            404,
-            460,
-            474,
-            259
+            303,
+            58,
+            645,
+            599
         ],
         "pre_delay": 1500,
         "action": "Click",
         "next": [
-            "回到主菜单",
-            "确认收菜"
+            "启动游戏PVP界面"
+        ]
+    },
+    "pvp判断赛季奖励": {
+        "recognition": "OCR",
+        "expected": "赛季奖励",
+        "roi": [
+            579,
+            2,
+            700,
+            700
+        ],
+        "pre_delay": 1500,
+        "action": "Click",
+        "target": [
+            880,
+            641,
+            1,
+            1
+        ],
+        "next": [
+            "启动游戏PVP界面"
+        ]
+    },
+    "pvp段位变化": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            316,
+            32,
+            685,
+            687
+        ],
+        "pre_delay": 1500,
+        "action": "Click",
+        "next": [
+            "启动游戏PVP界面"
         ]
     },
     "回到主菜单": {

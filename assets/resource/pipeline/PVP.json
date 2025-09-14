@@ -50,7 +50,7 @@
             1,
             1
         ],
-        "post_delay": 1500,
+        "post_delay": 3000,
         "next": [
             "自动战斗"
         ]
@@ -137,8 +137,15 @@
             "rate_limit": 30000
         },
         "next": [
+            "PVP结算"
+        ]
+    },
+    "PVP结算": {
+        "next": [
             "PVP结算1",
-            "PVP段位变化2"
+            "PVP结算2",
+            "PVP段位变化2",
+            "主返回菜单"
         ]
     },
     "PVP结算1": {
@@ -158,10 +165,9 @@
             1,
             1
         ],
-        "post_delay": 500,
+        "post_delay": 3500,
         "next": [
-            "PVP段位变化2",
-            "PVP结算2"
+            "PVP结算"
         ]
     },
     "PVP结算2": {
@@ -175,10 +181,9 @@
         ],
         "pre_delay": 500,
         "action": "Click",
-        "post_delay": 500,
+        "post_delay": 3500,
         "next": [
-            "PVP段位变化2",
-            "主返回菜单"
+            "PVP结算"
         ]
     },
     "PVP赛季结算": {
@@ -206,7 +211,7 @@
         "expected": "确认",
         "action": "Click",
         "next": [
-            "主返回菜单"
+            "PVP结算"
         ]
     }
 }
