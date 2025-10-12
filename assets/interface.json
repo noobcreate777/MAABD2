@@ -42,7 +42,11 @@
         },
         {
             "name": "副本",
-            "entry": "副本检查是否主页"
+            "entry": "副本检查是否主页",
+            "option": [
+                "金币或史莱姆",
+                "圣石洞穴"
+            ]
         },
         {
             "name": "餐厅收集",
@@ -76,5 +80,71 @@
             "name": "末日之书(每周一次即可)",
             "entry": "末日之书判断菜单"
         }
-    ]
+    ],
+    "option": {
+        "金币或史莱姆": {
+            "cases": [
+                {
+                    "name": "金币",
+                    "pipeline_override": {
+                        "选择米饭副本": {
+                            "expected": "金币"
+                        }
+                    }
+                },
+                {
+                    "name": "史莱姆",
+                    "pipeline_override": {
+                        "选择米饭副本": {
+                            "expected": "史莱姆"
+                        }
+                    }
+                }
+            ]
+        },
+        "圣石洞穴": {
+            "cases": [
+                {
+                    "name": "火圣石",
+                    "pipeline_override": {
+                        "选择圣石属性": {
+                            "expected": "火之洞穴"
+                        }
+                    }
+                },
+                {
+                    "name": "水圣石",
+                    "pipeline_override": {
+                        "选择圣石属性": {
+                            "expected": "水之洞穴"
+                        }
+                    }
+                },
+                {
+                    "name": "风圣石",
+                    "pipeline_override": {
+                        "选择圣石属性": {
+                            "expected": "风之洞穴"
+                        }
+                    }
+                },
+                {
+                    "name": "光圣石",
+                    "pipeline_override": {
+                        "选择圣石属性": {
+                            "expected": "光之洞穴"
+                        }
+                    }
+                },
+                {
+                    "name": "暗圣石",
+                    "pipeline_override": {
+                        "选择圣石属性": {
+                            "expected": "暗之洞穴"
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

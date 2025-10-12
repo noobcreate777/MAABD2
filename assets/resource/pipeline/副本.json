@@ -21,6 +21,27 @@
         "action": "Click",
         "post_delay": 3500,
         "next": [
+            "副本左滑"
+        ]
+    },
+    "副本左滑": {
+        "recognition": "OCR",
+        "expected": "快速狩猎",
+        "action": "Swipe",
+        "begin": [
+            511,
+            220,
+            1,
+            1
+        ],
+        "end": [
+            393,
+            326,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "next": [
             "选择第九章"
         ]
     },
@@ -77,27 +98,26 @@
         ],
         "post_delay": 1000,
         "next": [
-            "选择金币副本"
+            "选择米饭副本"
         ]
     },
-    "选择金币副本": {
-        "recognition": "TemplateMatch",
-        "template": "金币副本.png",
-        "green_mask": true,
+    "选择米饭副本": {
+        "recognition": "OCR",
+        "expected": "金币",
         "roi": [
-            81,
-            76,
-            113,
-            320
+            82,
+            89,
+            116,
+            312
         ],
         "pre_delay": 1000,
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "金币副本快速狩猎"
+            "米饭副本快速狩猎"
         ]
     },
-    "金币副本快速狩猎": {
+    "米饭副本快速狩猎": {
         "recognition": "OCR",
         "expected": "快速狩猎",
         "roi": [
@@ -110,10 +130,10 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
-            "金币副本点击MAX"
+            "米饭副本点击MAX"
         ]
     },
-    "金币副本点击MAX": {
+    "米饭副本点击MAX": {
         "recognition": "OCR",
         "expected": "MAX",
         "green_mask": true,
@@ -127,10 +147,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "金币副本确认狩猎"
+            "米饭副本确认狩猎"
         ]
     },
-    "金币副本确认狩猎": {
+    "米饭副本确认狩猎": {
         "recognition": "OCR",
         "expected": "狩猎",
         "roi": [
@@ -143,10 +163,10 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "金币副本返回"
+            "米饭副本返回"
         ]
     },
-    "金币副本返回": {
+    "米饭副本返回": {
         "pre_delay": 2000,
         "action": "Click",
         "target": [
@@ -161,9 +181,8 @@
         ]
     },
     "选择圣石副本": {
-        "recognition": "TemplateMatch",
-        "template": "圣石副本.png",
-        "green_mask": true,
+        "recognition": "OCR",
+        "expected": "圣石洞穴",
         "roi": [
             81,
             76,
@@ -173,6 +192,22 @@
         "pre_delay": 1000,
         "action": "Click",
         "post_delay": 1000,
+        "next": [
+            "选择圣石属性"
+        ]
+    },
+    "选择圣石属性": {
+        "recognition": "OCR",
+        "expected": "火之洞穴",
+        "roi": [
+            176,
+            92,
+            115,
+            275
+        ],
+        "pre_delay": 500,
+        "action": "Click",
+        "post_delay": 500,
         "next": [
             "圣石副本快速狩猎"
         ]
