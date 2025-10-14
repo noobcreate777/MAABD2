@@ -171,171 +171,117 @@
         ],
         "next": [
             "第八章判断地图位置"
-        ]
+        ],
+        "post_delay": 5000
     },
     "第八章判断地图位置": {
-        "timeout": 500,
+        "recognition": "OCR",
+        "expected": "罗戴夫镇",
         "inverse": true,
-        "recognition": "TemplateMatch",
-        "template": "第八章/第八章地图位置.png",
         "roi": [
-            389,
-            597,
-            501,
+            545,
+            622,
+            192,
+            44
+        ],
+        "action": "Click",
+        "target": [
+            301,
+            340,
+            2,
+            1
+        ],
+        "next": [
+            "第八章返回判断地图位置"
+        ]
+    },
+    "第八章返回判断地图位置": {
+        "recognition": "OCR",
+        "expected": "移动魔法阵",
+        "roi": [
+            129,
+            6,
+            246,
             100
         ],
         "next": [
-            "第八章向左切换地图1"
-        ],
-        "on_error": [
-            "第八章关闭地图1"
+            "第八章进入第一张图",
+            "第八章判断地图位置"
         ]
     },
-    "第八章关闭地图1": {
+    "第八章进入第一张图": {
         "recognition": "OCR",
-        "expected": "移动魔法阵",
+        "expected": "罗戴夫镇",
         "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
-        "action": "Click",
-        "target": [
-            102,
-            36,
-            3,
-            5
+            545,
+            622,
+            192,
+            44
         ],
         "next": [
-            "第八章探查"
-        ],
-        "on_error": [
-            "主返回菜单"
+            "第八章进入第一张图传送阵_真",
+            "第八章进入第一张图传送阵_假"
         ]
     },
-    "第八章向左切换地图1": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
-        "action": "Click",
-        "target": [
-            303,
-            343,
-            1,
-            1
-        ],
-        "next": [
-            "第八章向左切换地图2"
-        ]
-    },
-    "第八章向左切换地图2": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
-        "action": "Click",
-        "target": [
-            303,
-            343,
-            1,
-            1
-        ],
-        "next": [
-            "第八章向左切换地图3"
-        ]
-    },
-    "第八章向左切换地图3": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
-        "action": "Click",
-        "target": [
-            303,
-            343,
-            1,
-            1
-        ],
-        "next": [
-            "第八章向左切换地图4"
-        ]
-    },
-    "第八章向左切换地图4": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
-        "action": "Click",
-        "target": [
-            303,
-            343,
-            1,
-            1
-        ],
-        "next": [
-            "第八章传送1"
-        ]
-    },
-    "第八章传送1": {
+    "第八章进入第一张图传送阵_真": {
         "recognition": "TemplateMatch",
         "template": "传送点.png",
         "green_mask": true,
         "action": "Click",
         "pre_delay": 1000,
+        "post_delay": 3000,
         "next": [
-            "第八章探查"
+            "第八章点击探查"
         ]
     },
-    "第八章探查": {
+    "第八章进入第一张图传送阵_假": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
+        "template": "传送点.png",
+        "green_mask": true,
+        "inverse": true,
         "action": "Click",
         "target": [
-            1014,
-            649,
+            102,
+            38,
             1,
             1
         ],
+        "pre_delay": 1000,
         "post_delay": 3000,
         "next": [
-            "第八章吸收1"
+            "第八章点击探查"
         ]
     },
-    "第八章吸收1": {
+    "第八章点击探查": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "action": "Click",
+        "template": "地图收集/探查.png",
+        "green_mask": true,
         "roi": [
-            79,
-            144,
-            81,
-            83
+            930,
+            363,
+            224,
+            344
         ],
-        "target": [
-            975,
-            562,
-            1,
-            1
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "第八章点击吸收1"
+        ]
+    },
+    "第八章点击吸收1": {
+        "recognition": "TemplateMatch",
+        "template": "地图收集/吸收.png",
+        "green_mask": true,
+        "roi": [
+            927,
+            522,
+            84,
+            82
         ],
-        "post_delay": 3000,
+        "action": "Click",
+        "pre_delay": 2000,
+        "post_delay": 2000,
         "next": [
             "打开第八章地图2"
         ]
@@ -350,72 +296,61 @@
             1,
             1
         ],
+        "pre_delay": 2000,
         "next": [
-            "第八章向右切换地图1"
+            "第八章地图向右切换1"
         ]
     },
-    "第八章向右切换地图1": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
+    "第八章地图向右切换1": {
+        "recognition": "TemplateMatch",
+        "template": "地图收集/地图向右切换.png",
         "action": "Click",
-        "target": [
-            975,
-            342,
-            1,
-            1
-        ],
+        "pre_delay": 2000,
         "next": [
-            "第八章传送2"
+            "第八章进入第二张图"
         ]
     },
-    "第八章传送2": {
+    "第八章进入第二张图": {
         "recognition": "TemplateMatch",
         "template": "传送点.png",
         "green_mask": true,
         "action": "Click",
         "pre_delay": 1000,
+        "post_delay": 3000,
         "next": [
-            "第八章吸收2"
+            "第八章点击吸收2"
         ]
     },
-    "第八章吸收2": {
+    "第八章点击吸收2": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "action": "Click",
+        "template": "地图收集/吸收.png",
+        "green_mask": true,
         "roi": [
-            79,
-            144,
-            81,
-            83
+            927,
+            522,
+            84,
+            82
         ],
-        "target": [
-            975,
-            562,
-            1,
-            1
-        ],
-        "post_delay": 3000,
+        "action": "Click",
+        "pre_delay": 2000,
+        "post_delay": 2000,
         "next": [
-            "第八章召集1"
+            "第八章点击召集1"
         ]
     },
-    "第八章召集1": {
+    "第八章点击召集1": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "action": "Click",
-        "target": [
-            1098,
-            445,
-            1,
-            1
+        "template": "地图收集/召集.png",
+        "green_mask": true,
+        "roi": [
+            914,
+            361,
+            230,
+            342
         ],
-        "post_delay": 3000,
+        "action": "Click",
+        "pre_delay": 2000,
+        "post_delay": 2000,
         "next": [
             "打开第八章地图3"
         ]
@@ -430,72 +365,61 @@
             1,
             1
         ],
+        "pre_delay": 2000,
         "next": [
-            "第八章向右切换地图2"
+            "第八章地图向右切换2"
         ]
     },
-    "第八章向右切换地图2": {
-        "recognition": "OCR",
-        "expected": "移动魔法阵",
-        "roi": [
-            152,
-            11,
-            189,
-            60
-        ],
+    "第八章地图向右切换2": {
+        "recognition": "TemplateMatch",
+        "template": "地图收集/地图向右切换.png",
         "action": "Click",
-        "target": [
-            975,
-            342,
-            1,
-            1
-        ],
+        "pre_delay": 2000,
         "next": [
-            "第八章传送3"
+            "第八章进入第三张图"
         ]
     },
-    "第八章传送3": {
+    "第八章进入第三张图": {
         "recognition": "TemplateMatch",
         "template": "传送点.png",
         "green_mask": true,
         "action": "Click",
         "pre_delay": 1000,
+        "post_delay": 3000,
         "next": [
-            "第八章吸收3"
+            "第八章点击吸收3"
         ]
     },
-    "第八章吸收3": {
+    "第八章点击吸收3": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "action": "Click",
+        "template": "地图收集/吸收.png",
+        "green_mask": true,
         "roi": [
-            79,
-            144,
-            81,
-            83
+            957,
+            439,
+            91,
+            81
         ],
-        "target": [
-            1014,
-            482,
-            1,
-            1
-        ],
-        "post_delay": 3000,
+        "action": "Click",
+        "pre_delay": 2000,
+        "post_delay": 2000,
         "next": [
-            "第八章召集2"
+            "第八章点击召集2"
         ]
     },
-    "第八章召集2": {
+    "第八章点击召集2": {
         "recognition": "TemplateMatch",
-        "template": "副本.png",
-        "action": "Click",
-        "target": [
-            1098,
-            445,
-            1,
-            1
+        "template": "地图收集/召集.png",
+        "green_mask": true,
+        "roi": [
+            914,
+            361,
+            230,
+            342
         ],
-        "post_delay": 3000,
+        "action": "Click",
+        "pre_delay": 2000,
+        "post_delay": 2000,
         "next": [
             "主返回菜单"
         ]

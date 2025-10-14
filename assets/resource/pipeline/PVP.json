@@ -208,8 +208,23 @@
     },
     "PVP段位变化2": {
         "recognition": "OCR",
-        "expected": "确认",
+        "expected": [
+            "段位下滑",
+            "恭喜升星"
+        ],
+        "roi": [
+            540,
+            500,
+            202,
+            75
+        ],
         "action": "Click",
+        "target": [
+            636,
+            657,
+            1,
+            1
+        ],
         "next": [
             "PVP结算"
         ]

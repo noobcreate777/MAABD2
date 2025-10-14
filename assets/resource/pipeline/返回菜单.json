@@ -86,6 +86,7 @@
             58,
             70
         ],
+        "post_delay": 5000,
         "action": "DoNothing",
         "next": [
             "主返回菜单"
@@ -95,6 +96,6 @@
         ]
     },
     "菜单啥也不干": {
-        "action": "DoNothing"
+        "action": "DoNothing",
     }
 }

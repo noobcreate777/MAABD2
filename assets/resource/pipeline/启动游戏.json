@@ -52,7 +52,6 @@
         "recognition": "TemplateMatch",
         "template": "进入游戏.png",
         "action": "Click",
-        //5秒后执行"回到主菜单"
         "post_delay": 10000,
         "next": [
             "启动游戏PVP界面",
@@ -83,8 +82,7 @@
             "PVP判断变化",
             "pvp判断赛季奖励",
             "pvp段位变化",
-            "确认收菜",
-            "回到主菜单"
+            "确认收菜"
         ]
     },
     "PVP判断变化": {
