@@ -177,7 +177,7 @@
     "第十三章判断地图位置": {
         "recognition": "OCR",
         "expected": "华特波尔镇",
-        //"inverse": true,
+        "inverse": true,
         "roi": [
             545,
             622,
