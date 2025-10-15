@@ -349,8 +349,8 @@
             342
         ],
         "action": "Click",
-        "pre_delay": 2000,
-        "post_delay": 2000,
+        "pre_delay": 2500,
+        "post_delay": 2500,
         "next": [
             "打开第八章地图3"
         ]
@@ -418,8 +418,8 @@
             342
         ],
         "action": "Click",
-        "pre_delay": 2000,
-        "post_delay": 2000,
+        "pre_delay": 2500,
+        "post_delay": 2500,
         "next": [
             "主返回菜单"
         ]
